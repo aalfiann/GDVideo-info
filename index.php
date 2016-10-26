@@ -1,5 +1,5 @@
 <?php
-# 執行連線
+# Curl
 	$URL = "https://drive.google.com/get_video_info?docid=".$_SERVER["QUERY_STRING"];		// FileID in URL
 	if (strlen($_SERVER["QUERY_STRING"]) != "28") {						// Error IF(NotExist) and CorrectID = 28 Character
 		echo "這部影片不存在。例：<a href='/?0B757HvrhbFeienJaWnFfWGtQYUU'> http://www.domain.com/?0B757HvrhbFeienJaWnFfWGtQYUU</a>";		// Error Text(NotExist)
