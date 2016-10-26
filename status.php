@@ -6,10 +6,10 @@
 	} elseif(preg_match("/errorcode=100/", $response_data)) {
 		echo "這部影片不存在。";
 	} elseif(preg_match("/errorcode=150/", $response_data)) {
-		echo "<img src='".$VideoScreenshot."'><br>";
+		echo '<img src=".'$VideoScreenshot.'"><br>';
 		echo "您沒有這部影片的存取權限。";
 	} else {
-		echo "<img src='".$VideoScreenshot."'><br>";
+		echo '<img src="'.$VideoScreenshot.'"><br>"';
 		preg_match_all("/([^\|]+)\|/", $response_data, $VideoSource);
 		$VideoName = preg_replace("/&BASE_URL.*/", Null, preg_replace("/.*title=/", Null, $response_data));
 		for($i = 1; $i < sizeof($VideoSource[0]); $i++) {
